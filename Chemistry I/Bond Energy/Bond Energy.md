@@ -58,5 +58,25 @@ The same would happen were you to have made them closer together.
 The atoms in a bond sit at an equilibrium distance, due to certain cross-atomic forces cancelling out (_being equalized_).
 Knowing the strength of this equilibrium (think of this as how much you are allowed to push or pull on the atoms as they stay bonded) tells us a lot about how much energy it takes to break the bond.
 
+### Inter-atomic forces
+
+So that we're not talking completely in the abstract, let's discuss the aforementioned cross-atomic forces.
+For a more detailed view of these forces, including some of the mathematics involved, read the [electrostatics worksheet].
+
+Atoms are composed of two types of charged subatomic particles: protons, which are positively charged, and electrons, which are negatively charged.
+When two atoms are close enough, the particles in one atom can interact with the atoms in the other.
+
+Recall that opposite charges attract and like charges repel.^[This is just a fancy way of saying that protons attract electrons, electrons attract protons, protons repel protons, and electrons repel electrons.]
+This means that, as in Figure\ \ref{fig:attraction-repulsion} there are some attractive forces and some repulsive forces between the atoms.
+If you bring the atoms closer, you are significantly increasing the repulsive forces because you are reducing the distance between protons far more than the distance from electrons to protons.
+Conversely, if you separate the atoms, you decrease repulsion far more than you decrease attraction.
+
+![Protons repulse other protons, electrons repulse other electrons, protons attract electrons, and electrons attract protons.](images/attraction-repulsion.jpg){#fig:attraction-repulsion}
+
+This explains why the equilibrium was _stable_;
+no matter how you affected the distance, it would try to self-correct.
+
 \bibliographystyle{alpha}
 \bibliography{ref}
+
+[electrostatics worksheet]: https://pihart.github.io/worksheets/Chemistry%20I/Electrostatics/electrostatics.pdf
