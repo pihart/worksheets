@@ -1,0 +1,307 @@
+%! Author = avime
+%! Name = mathreview
+%! Project = LaTeX Hub
+%! Date = 5/25/2020
+
+\documentclass[12pt,paper=letter]{scrartcl}
+
+\usepackage[page,center,titling,header,footer,links]{worksheet}
+\usepackage{biblatex}
+\usepackage{amssymb}
+
+\addtolength{\jot}{1em}
+
+
+
+\begin{document}
+
+    \title{Math Review}
+    \author{Avi Mehra}
+    \date{5/25/2020}
+    \maketitle
+
+
+    \section{Basic Operations}
+
+
+    \section{Sets}
+    In Naive Set Theory,
+    a set is just a collection of anything.
+    The set of all integers between $1$ and $4$, inclusive,
+    can be written as
+    \[
+        \set{1,2,3,4},
+    \]
+    and the set of the pizza on the counter can be written as
+    \[
+        \set{\text{the pizza on the counter}}.
+    \]
+
+    Sets don't have any order structure;
+    the first set may very well be written as
+    \[
+        \set{3,2,4,1}
+    \]
+    without changing the meaning whatsoever.
+
+    \subsection{Set terminology}
+    \begin{defboxed}
+        Anything inside of a set is called an element of the set or a member of the set.
+        If $x$ is an element of $S$,
+        we write $x\in S$ to show this relation.
+        This is sometimes written in reverse as $S\ni x$.
+    \end{defboxed}
+
+    \begin{defboxed}
+        A set is called finite if it has a natural number of elements.
+    \end{defboxed}
+
+    \begin{defboxed}
+        For a finite set $S$,
+        its cardinality $\abs{S}$ is the number of elements it contains.
+    \end{defboxed}
+
+    \begin{defboxed}
+        A set is called countable if there is an algorithm to list its elements.
+        The natural numbers are countable, because you can list each natural number just by counting up by 1 from 0.
+        All finite sets are countable.
+    \end{defboxed}
+
+    \begin{defboxed}
+        A set is countably infinite if it is countable and infinite.
+    \end{defboxed}
+
+    \begin{defboxed}
+        We say a set is uncountable if it is not countable.
+        All uncountable sets are infinite.
+    \end{defboxed}
+
+    \begin{defboxed}
+        For a finite set $F$,
+        countably infinite set $C$,
+        and uncountable set $U$,
+        their cardinalities are ordered as follows
+        \[
+            \abs{F}<\abs{C}<\abs{U}.
+        \]
+        That is,
+        the cardinality of a finite set is always less than the cardinality of a countably infinite set,
+        which is always less than the cardinality of an uncountable set.
+    \end{defboxed}
+
+    \subsection{Set relations}
+
+    \begin{defboxed}
+        If every element of $S$ is also an element of $T$,
+        we write $S\subseteq T$ and say $S$ is a subset of $T$.
+        If $S\subseteq T$ and $S\ne T$,
+        we write $S\subset T$ and say $S$ is a proper subset of $T$.
+    \end{defboxed}
+    \begin{defboxed}
+        The relationship $S\subseteq T$ is the same as $T\supseteq S$,
+        which is read ``T is a superset of S."
+        Similarly, $S\subset T$ is the same as $T\supset S$,
+        which is read ``T is a proper superset of S."
+    \end{defboxed}
+
+    \subsection{Commonly encountered sets}
+
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Name & Symbol & Expansion\\
+        \hline
+        Integers & $\Z$ & $\set{\dots, -3, -2, -1, 0, 1, 2, 3, \dots}$\\
+        Natural Numbers & $\N$ & $\set{0, 1, 2, 3, 4, 5, 6, \dots}$\\
+        Positive Integers & $\Z^+$ & $\set{1, 2, 3, 4, 5, 6, 7, \dots}$\\
+        Real Numbers & $\R$ & Any ``decimal" number, uncountable\\
+        \hline
+    \end{tabular}
+
+    \subsection{Set representations}
+    There are, however,
+    other ways of expressing sets.
+    For example,
+    the first set we looked at can be rewritten as
+    \[
+        \set{n\in\Z\mid 1\leq n\leq 4}.
+    \]
+    This notation reads ``the set of all integers $n$ where $1\leq n\leq 4$."
+
+    \pnp
+
+    We can use this notation to write the set $S$ of real numbers between 0 (inclusive) and 1 (exclusive):
+    \[
+        S = \set{x\in\R\mid 0\leq x<1}.
+    \]
+    However,
+    it can also be written as
+    \[
+        S = [0,1).
+    \]
+    In this notation,
+    we use $[a,b)$ to represent the range $\set{x\in\R\mid a\leq x<b}$ between $a$ and $b$.
+    Square brackets represent an inclusive bound while parenthesis represent an exclusive bound.
+    We can use also use the exclusive bounds $+-\infty$:
+    the set of all real numbers greater than 6 is $(6,\infty)$ and the set of all real numbers less than 2 is $(-\infty,2)$.
+
+    \subsection{Set operations}
+
+    \begin{defboxed}
+        Given sets $A$ and $B$,
+        the union $A\cup B$ is defined as the set of all elements in either set:
+        \[
+            A\cup B := \set{s\mid s\in A \text{ or } s\in B}.
+        \]
+    \end{defboxed}
+    \begin{defboxed}
+        Given sets $A$ and $B$,
+        the intersection $A\cap B$ is defined as the set of all elements common to both sets:
+        \[
+            A\cap B := \set{s\mid s\in A \text{ and } s\in B}.
+        \]
+    \end{defboxed}
+    \begin{defboxed}
+        Given sets $A$ and $B$,
+        the set difference (or asymmetric difference) $A\smallsetminus B$ is defined as the set of all elements in $A$ but not in $B$:
+        \[
+            A\smallsetminus B := \set{s\mid s\in A \text{ and } s\not\in B}.
+        \]
+    \end{defboxed}
+    \begin{defboxed}
+        Given sets $A$ and $B$,
+        the symmetric difference (or disjunctive union) $A\triangle B$ is defined as the set of all elements in either set but not both:
+        \[
+            A\triangle B := \set{s\mid s\in A \text{ xor } s\in B} = A\cup B \smallsetminus A\cap B.
+        \]
+    \end{defboxed}
+
+
+    \section{Functions}
+
+    \begin{enumerate}
+        \item Continuity
+        \item Intermediate value theorem
+        \item Mean value theorem
+        \item Invertible
+        \item method for calculating inverses
+    \end{enumerate}
+
+
+    \section{Equations and Equality}
+    When you have an equation,
+    both the LHS and RHS are equivalent,
+    so any function or operation can be applied to both of them while preserving the equality.
+    This is because you are \bluebf{applying the function on the \emph{same thing}};
+    of course the results will be the same.
+
+    \subsection{expansion, dist property, foil, binomial thm}
+
+
+    \section{Euclidean geometry}
+
+    \begin{enumerate}
+        \item angles
+        \subitem right
+        \subitem acute
+        \subitem obtuse
+        \item triangles
+        \subitem area
+        \subitem perimeter
+        \subitem similarity
+        \subitem heron's formula
+        \subitem centers
+        \subsubitem incenter
+        \subsubitem circumcenter
+        \subitem sum of internal angles
+        \subsubitem angle chasing
+        \subitem right, acute, obtuse
+        \subsubitem pythagorean theorem, pythagorean inequalities
+        \subitem scalene, isosceles, equilateral
+        \subsubitem isosceles and equilateral area problems
+        \item circles
+        \subitem area
+        \subitem circumference
+        \subitem area and circumference of sectors
+        \subitem radius is orthogonal to tangent vector
+        \subitem angle properties
+        \item solids
+        \subitem prism
+        \subsubitem volume = bh
+        \subsubitem surface area
+        \subitem cylinders
+        \subitem pyramids
+        \subsubitem volume = bh/3
+        \subsubitem surface area
+        \subitem cone
+        \subitem cross-sections
+        \item transversal theorem
+        \item vertical, complementary, supplementary angles
+    \end{enumerate}
+
+
+    \section{solving linear equations}
+
+
+    \section{systems of linear equations}
+    \begin{enumerate}
+        \item algebraic solution by substitution
+        \item algebraic solution by reduction
+    \end{enumerate}
+
+
+    \section{exponentiation (powers)}
+
+    \subsection{raising to the natural power}
+
+    \subsection{raising to the integer power}
+
+    \subsection{raising to the real power}
+
+    \subsection{nth roots}
+
+
+    \section{solving polynomial equations}
+
+    \subsection{factoring}
+
+    \subsection{completing the square}
+
+    \subsection{quadratic formula}
+
+
+    \section{parity behavior of polynomial equations}
+
+
+    \section{exponentiation (exp)}
+
+    \subsection{logarithm}
+
+
+    \section{systems of equations}
+    \begin{enumerate}
+        \item solutions by graphing
+        \item analytic (algebraic) solutions
+    \end{enumerate}
+
+
+    \section{inequalities}
+    \begin{enumerate}
+        \item graphing
+        \item solving
+    \end{enumerate}
+
+
+    \section{systems of linear inequalities}
+    \begin{enumerate}
+        \item graphing
+        \item solving
+    \end{enumerate}
+
+
+    \section{probability}
+    \begin{enumerate}
+        \item union and intersection formulas
+        \item independence
+    \end{enumerate}
+
+\end{document}
