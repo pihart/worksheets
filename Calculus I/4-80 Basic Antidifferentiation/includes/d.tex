@@ -1,0 +1,26 @@
+\renewcommand{\avibounds}{_0^2}
+\renewcommand{\avifn}{\del{3x^2 - 6x + 2}}
+\renewcommand{\avianti}{x^3 - 3x^2 + 2x}
+
+\begin{probboxed}
+    \[
+        \aviprob{}
+    \]
+\end{probboxed}
+
+\aviinversepowerrule
+\[
+    \ddx\del\avianti{} = \avifn{}.
+\]
+So by the Fundamental Theorem of Calculus,
+\[
+    \aviprob{}
+    = \avibounded{}.
+\]
+Now we plug in our bounds:
+\begin{align*}
+    \avibounded{}
+    &= \del{2^3 - 3(2)^2 + 2(2)} - \del{0^3 - 3(0)^2 + 2(0)} \\
+    &= \del{8 - 12 + 4} - 0 \\
+    &= \boxed{0}.
+\end{align*}

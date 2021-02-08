@@ -1,0 +1,29 @@
+\renewcommand{\avibounds}{_{-2}^3}
+\renewcommand{\avifn}{\del{x-10}}
+\renewcommand{\avianti}{\frac{1}{2}x^2 - 10x}
+\renewcommand{\aviconstant}{2}
+
+\begin{probboxed}
+    \[
+        \aviprob{}
+    \]
+\end{probboxed}
+
+\aviinversepowerrule
+\[
+    \ddx\del\avianti{} = \avifn{}.
+\]
+So by the Fundamental Theorem of Calculus,
+\[
+    \aviprob{}
+    = \avibounded{}.
+\]
+Now we plug in our bounds:
+\begin{align*}
+    \avibounded{}
+    &= 2\del{\del{\frac{1}{2}(3)^2 - 10(3)} - \del{\frac{1}{2}(-2)^2 - 10(-2)}} \\
+    &= \del{\del{(3)^2 - 20(3)} - \del{(-2)^2 - 20(-2)}} \\
+    &= \del{9 - 60} - \del{4 - (-40)} \\
+    &= -51 - 44 \\
+    &= \boxed{-95}.
+\end{align*}

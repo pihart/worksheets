@@ -1,0 +1,26 @@
+\renewcommand{\avibounds}{_{\pi / 4}^{\pi / 2}}
+\renewcommand{\avifn}{\sin x}
+\renewcommand{\avianti}{-\cos x}
+
+\begin{probboxed}
+    \[
+        \aviprob{}
+    \]
+\end{probboxed}
+
+\avirecall
+\[
+    \ddx\del\avianti{} = \avifn{}.
+\]
+So by the Fundamental Theorem of Calculus,
+\[
+    \aviprob{}
+    = \avibounded{}.
+\]
+Now we plug in our bounds:
+\begin{align*}
+    \avibounded{}
+    &= -\cos\frac{\pi}{2} - \del{-\cos\frac{\pi}{4}} \\
+    &= 0 -\del{-\frac{\sqrt{2}}{2}} \\
+    &= \boxed{\frac{\sqrt{2}}{2}}.
+\end{align*}

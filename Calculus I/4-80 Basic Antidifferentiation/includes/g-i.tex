@@ -1,0 +1,28 @@
+\renewcommand{\avibounds}{_3^9}
+\renewcommand{\avifn}{\del{2x - 20}}
+\renewcommand{\avianti}{x^2 - 20x}
+\renewcommand{\aviconstant}{}
+
+\begin{probboxed}
+    \[
+        \aviprob{}
+    \]
+\end{probboxed}
+
+\aviinversepowerrule
+\[
+    \ddx\del\avianti{} = \avifn{}.
+\]
+So by the Fundamental Theorem of Calculus,
+\[
+    \aviprob{}
+    = \avibounded{}.
+\]
+Now we plug in our bounds:
+\begin{align*}
+    \avibounded{}
+    &= \del{(9)^2 - 20(9)} - \del{(3)^2 - 20(3)} \\
+    &= \del{81 - 180} - \del{9 - 60} \\
+    &= \del{-99} - \del{-51} \\
+    &= \boxed{-48}.
+\end{align*}

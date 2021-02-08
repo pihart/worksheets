@@ -1,0 +1,28 @@
+\renewcommand{\avibounds}{_{-1}^8}
+\renewcommand{\avifn}{x^{1/3}}
+\renewcommand{\avianti}{\frac{3}{4}x^{4/3}}
+\renewcommand{\aviconstant}{}
+
+\begin{probboxed}
+    \[
+        \aviprob{}
+    \]
+\end{probboxed}
+
+\aviinversepowerrule
+\[
+    \ddx\del\avianti{} = \avifn{}.
+\]
+So by the Fundamental Theorem of Calculus,
+\[
+    \aviprob{}
+    = \avibounded{}.
+\]
+Now we plug in our bounds:
+\begin{align*}
+    \avibounded{}
+    &= \frac{3}{4}(8)^{4/3} - \frac{3}{4}(-1)^{4/3} \\
+    &= \frac{3}{4}(16 - 1) \\
+    &= \frac{3}{4}(15) \\
+    &= \boxed{\frac{45}{4}}.
+\end{align*}

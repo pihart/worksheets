@@ -1,0 +1,28 @@
+\renewcommand{\avibounds}{_1^3}
+\renewcommand{\avifn}{\del{\frac{3}{x^2}}}
+\renewcommand{\avianti}{\frac{-3}{x}}
+\renewcommand{\aviconstant}{2}
+
+\begin{probboxed}
+    \[
+        \aviprob{}
+    \]
+\end{probboxed}
+
+\aviinversepowerrule
+\[
+    \ddx\del\avianti{} = \avifn{}.
+\]
+So by the Fundamental Theorem of Calculus,
+\[
+    \aviprob{}
+    = \avibounded{}.
+\]
+Now we plug in our bounds:
+\begin{align*}
+    \avibounded{}
+    &= 2\del{\frac{-3}{3} - \frac{-3}{1}} \\
+    &= 2(-1 - (-3)) \\
+    &= 2(2) \\
+    &= \boxed{4}.
+\end{align*}
