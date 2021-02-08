@@ -67,7 +67,7 @@ Atoms are composed of two types of charged subatomic particles: protons, which a
 When two atoms are close enough, the particles in one atom can interact with the atoms in the other.
 
 Recall that opposite charges attract and like charges repel.^[This is just a fancy way of saying that protons attract electrons, electrons attract protons, protons repel protons, and electrons repel electrons.]
-This means that, as in Figure\ \ref{fig:attraction-repulsion} there are some attractive forces and some repulsive forces between the atoms.
+This means that, as in Figure\ \ref{fig:attraction-repulsion}, there are some attractive forces and some repulsive forces between the atoms.
 If you bring the atoms closer, you are significantly increasing the repulsive forces because you are reducing the distance between protons far more than the distance from electrons to protons.
 Conversely, if you separate the atoms, you decrease repulsion far more than you decrease attraction.
 
