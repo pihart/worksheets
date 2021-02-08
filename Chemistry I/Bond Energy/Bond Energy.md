@@ -21,5 +21,9 @@ Note that they have the same length.\ \cite{Sphere_and_Ball}](images/Sphere_and_
 When we treat an atom as a sphere, its _atomic radius_ is the radius of that sphere.
 :::
 
+We already know that certain atoms have different "sizes."
+The concept of atomic radii makes this precise:
+different elements—and even different atoms of the same element—have different atomic radii.
+
 \bibliographystyle{alpha}
 \bibliography{ref}
