@@ -4,7 +4,7 @@ author: Avi Mehra
 date: February 7, 2021
 worksheet: true
 package:
- - parskip
+  - parskip
 ---
 
 # Atomic Radii
@@ -32,19 +32,19 @@ By virtue of being bonded, their spheres are right next to each other (_adjacent
 Then, as in Figure\ \ref{fig:adjacent}, the distance between the centers of these two atoms is just the sum of the atomic radii.[^overlap]
 
 [^overlap]:
-This is another simplification.
-It is entirely reasonable for the spheres to overlap;
-this happens as a result of, for example, shared electron pairs due to covalent bonding.
-It also may be the case that there is a small gap between the spheres.
-Regardless, we should expect that the distance between the spheres is relatively close to the sum of the atomic radii.
+    This is another simplification.
+    It is entirely reasonable for the spheres to overlap;
+    this happens as a result of, for example, shared electron pairs due to covalent bonding.
+    It also may be the case that there is a small gap between the spheres.
+    Regardless, we should expect that the distance between the spheres is relatively close to the sum of the atomic radii.
 
-\begin{figure}
-    \centering
-    \input{images/adjacent-spheres.tikz}
-    \caption{Two adjacent spheres.
-        The distance between the centers is the sum of the individual radii.}
-    \label{fig:adjacent}
-\end{figure}
+::: figure
+\centering
+\input{images/adjacent-spheres.tikz}
+\caption{Two adjacent spheres.
+The distance between the centers is the sum of the individual radii.}
+\label{fig:adjacent}
+:::
 
 \bibliographystyle{alpha}
 \bibliography{ref}
