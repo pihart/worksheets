@@ -3,11 +3,9 @@
 %! Project = LaTeX Hub
 %! Date = 5/25/2020
 
-\documentclass[12pt,paper=letter]{scrartcl}
+\documentclass[12pt,paper=letter]{article}
 
-\usepackage[page,center,titling,header,footer,links]{worksheet}
-\usepackage{biblatex}
-\usepackage{amssymb}
+\usepackage[page,links,theorem,thmboxed]{avimehra}
 
 \addtolength{\jot}{1em}
 
@@ -62,7 +60,7 @@
     \end{defboxed}
 
     \begin{defboxed}
-        A set is called countable if there is an algorithm to list its elements.
+        A set is called countable if you can write down a (possibly infinite) list of its elements without missing any.
         The natural numbers are countable, because you can list each natural number just by counting up by 1 from 0.
         All finite sets are countable.
     \end{defboxed}
@@ -126,8 +124,6 @@
         \set{n\in\Z\mid 1\leq n\leq 4}.
     \]
     This notation reads ``the set of all integers $n$ where $1\leq n\leq 4$."
-
-    \pnp
 
     We can use this notation to write the set $S$ of real numbers between 0 (inclusive) and 1 (exclusive):
     \[
