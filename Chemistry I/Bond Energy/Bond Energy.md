@@ -3,6 +3,8 @@ title: Combustion 1`\\\large{Bond Energy}`{=latex}
 author: Avi Mehra
 date: February 7, 2021
 pset: true
+package:
+ - parskip
 ---
 
 # Atomic Radii
