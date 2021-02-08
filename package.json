@@ -1,0 +1,24 @@
+{
+  "name": "worksheets",
+  "version": "1.0.0",
+  "description": "Instructional worksheets for various introductory topics",
+  "main": "index.js",
+  "devDependencies": {
+    "tex": "github:pihart/tex#v2.1.0"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "github:pihart/worksheets"
+  },
+  "keywords": [
+    "worksheet",
+    "handout"
+  ],
+  "author": "Avi Mehra",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/pihart/worksheets/issues"
+  },
+  "homepage": "https://github.com/pihart/worksheets#readme"
+}
