@@ -1,7 +1,15 @@
 \begin{tikzpicture}
-    \draw (0, 0) circle (1);
-    \coordinate (A) at ({sqrt(3) / 2}, 1/2);
+    \coordinate (A) at (0, 0);
+    \draw (A) circle (1);
+
+    \coordinate (Kiss) at ({sqrt(3) / 2}, 1/2);
+
     \coordinate (B) at ({3 / 2 * sqrt(3)}, 3/2);
-    \draw (0, 0) -- (B);
     \draw (B) circle (2);
+
+    \draw (A) -- (B);
+
+    \filldraw [gray] (A) circle (2pt);
+    \filldraw [gray] (B) circle (2pt);
+    \filldraw [gray] (Kiss) circle (2pt);
 \end{tikzpicture}
