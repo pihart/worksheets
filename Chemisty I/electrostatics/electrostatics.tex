@@ -1,0 +1,696 @@
+%! Author = avime
+%! Date = 4/18/2020
+
+\documentclass[12pt,paper=letter]{scrartcl}
+
+\usepackage[page,center,titling,header,footer,links]{worksheet}
+
+\addtolength{\jot}{1em}
+
+\begin{document}
+
+    \title{Electrostatics}
+    \author{Avi Mehra}
+    \date{4/18/2020}
+    \maketitle
+
+
+    \section{What is electrostatics?}\label{sec:what-is-electrostatics?}
+    \bluebf{Electrostatics is the study of non-moving electricity.}
+    \pnp
+    Our lives depend on electricity, or the property of being electrically charged.
+    \pnp
+    Especially if you did the Electric House project in Physics, you probably believe that electricity is the motion of electrons through a conductive material.
+    This is true, but electricity is more than just moving electrons.
+    \pnp
+    You might have heard the term \emph{static electricity} to describe what happens when electrically charged objects cause forces without moving.
+    This \emph{static electricity} is what we will be studying in Electrostatics.
+    We will focus on the following topics:
+
+    \begin{itemize}[topsep=2pt,itemsep=-0.7ex,partopsep=1ex,parsep=1ex]
+        \item Electric charge
+        \item Electric potential
+        \item Potential difference (voltage)
+        \item Electric fields
+        \item Electric force (Coulomb's Law)
+        \item Potential energy
+    \end{itemize}
+
+    \subsubsection{About this worksheet}
+    Some of the practice problems and exercises will have hints like the one at the end of this paragraph.
+    You can view the hints at the end of this worksheet (Section~\ref{sec:hints}), or by clicking the number in the hint. \hint{\ref{hint:ex}}
+
+    \pnp
+
+    If you still need help after the hints,
+    you can contact us through email, class/office hours, or the tutor request form on the \href{https://tiny.cc/shieh/grades}{Grades page} of the \href{https://tiny.cc/shieh}{class website}.
+    \pnp
+    In this worksheet, we will ignore significant figures and use either 0 or 1 digit after the decimal point.
+    Electric potential and potential energy are treated as relative to a point at infinity.
+    If you don't know what these mean, don't worry.
+    %\subsection{Terminology}
+    %\bluebf{Magnitude:} this is the numeric value of
+
+
+    \section{Electric Charge}\label{sec:electric-charge}
+    Think of some object, for example your phone or a desk.
+    This object has properties like color, volume, mass, and density.
+    \pnp
+    Electric charge is similar to mass;
+    it's the amount of ``substance" that an object has.
+    Mass is the amount of matter in an object;
+    electric charge is the amount of ``electricity" that an object has.
+    \pnp
+    Later we will learn that, because of this fact, gravity and electricity are very similar.
+
+    \begin{exboxed}[Mass]
+        My phone has a mass of $184\text{ g}=0.184\text{ kg}$.
+        As long as I don't break off a piece of the phone, its mass will stay the same.
+    \end{exboxed}
+
+
+    \begin{exboxed}[Electric charge]
+        A proton has a charge of $1.6021766208 \times 10^{-19}$ Coulombs.
+        The proton will always have the same charge.
+    \end{exboxed}
+
+
+    \section{Electrostatic (Electric) Potential}\label{sec:electrostaticpotential}
+
+    \subsection{Analogy\textemdash Gravitational Potential}\label{subsec:gravitational-potential}
+
+    Think about a ball being dropped from a tower (Figure~\ref{fig:ball_tower}).
+    When the ball is high, gravity can push it down.
+    Once the ball is on the ground, gravity can't force it down anymore.
+    When the object is high up, it is in high potential, and when it is on the ground, it is in a state of 0 potential.
+    In Figure~\ref{fig:tower}, you can see that gravitational potential increases with height.
+    For gravity, potential is a constant multiple of height:
+    \[\text{Potential}=g\cdot h.\]
+
+    \input{Figures/ball_tower}
+
+    \input{Figures/tower}
+
+    \subsection{Electric Potential}\label{subsec:electric-potential}
+    In Subsection~\ref{subsec:gravitational-potential},
+    we found out that gravitational potential is just a (scaled) measure of height, or how much gravity can make an object move.
+    Electric potential is very similar; \bluebf{it is a measure of how much the electric force can make an object move}.
+    \pnp
+    Electric potential is caused by electrically charged objects,
+    just like gravitational potential is caused by gravitationally charged objects (the Earth).
+
+    \input{Figures/potential}
+
+    % Law, definition, formula
+    \begin{thmboxed}
+        \label{thm:potential}
+        The electric potential $V$ caused by a charge of $Q$ at a distance of $r$ away
+        (the potential at Point $P$ in Figure~\ref{fig:potential}) is given by
+        \begin{equation}
+            V=\frac{kQ}{r},
+            \label{eq:potential}
+        \end{equation}
+        where $k$ is a constant $\approx\kconst$.
+    \end{thmboxed}
+
+    It is important to note that both gravitational and electric potential are properties of space (related to position),
+    not of any object sitting within space.
+
+    %   \begin{exboxed}
+    %      What is the electric potential ten meters ($10 \meters$) from a positive charge of twenty Coulombs ($+20\coulombs$)?
+    % \end{exboxed}
+
+    \begin{exboxed}
+        \label{ex:potential_1}
+        What is the electric potential $10 \meters$ from a charge of $+20\coulombs$?
+    \end{exboxed}
+
+    To solve this problem we can just use the formula from Theorem~\ref{thm:potential}:
+    \begin{align*}
+        V&=\frac{kQ}{r}\\
+        &=\frac{\del{\kconst}\del{20 \coulombs}}{10 \meters}\\
+        &=\boxed{1.8\times 10^{10}\volts}.
+    \end{align*}
+
+    \begin{exboxed}
+        The electric potential at a point three meters ($3\meters$) from a charge is -1 Volt ($-1\volts$).
+        What is the value of the charge?
+    \end{exboxed}
+
+    We begin as before, first plugging in the values that we know into Equation~\ref{eq:potential}:
+    \begin{align*}
+        V&=\frac{kQ}{r}\\
+        -1\volts&=\frac{\del{\kconst}\del{Q}}{3 \meters},
+    \end{align*}
+    but now we have to make some manipulations.
+    First, we multiply both sides of the equation by $3\meters$ to remove it from the denominator (the bottom):
+    \begin{align*}
+        -1\volts\cdot 3\meters&=\frac{\del{\kconst}\del{Q}}{3 \meters}\cdot 3 \meters\\
+        -3 \volts\cdot\meter&=\del{\kconst}\del{Q}.
+    \end{align*}
+    We now divide by $k=\kconst$ so that we are left with $Q$,
+    the charge that we want to find.
+    \begin{align*}
+        \frac{-3 \volts\cdot\meter}{\del{\kconst}}&=\frac{\del{\kconst}\del{Q}}{\del{\kconst}}\\
+        -3.3\times 10^{-10} \coulombs &= Q\\
+        Q &= \boxed{-3.3\times 10^{-10} \coulombs}.
+    \end{align*}
+    \begin{mdframed}[style=exmdbox]
+        \begin{problem}
+            What is the voltage at a point $7\meters$ from a $-2.2\coulombs$ charge?
+        \end{problem}
+        \begin{problem}
+            What is the voltage $2\millimeters$ from a charge of $6.4\nanocoulombs$? \hint{\ref{hint:table_of_conversions}}
+        \end{problem}
+
+        \begin{problem}
+            What happens to electric potential as the distance to the charge increases? \hint{\ref{hint:approximate_limit}}
+        \end{problem}
+
+        \begin{problem}[Shieh]
+            The electric potential at a point $5\meters$ from a charge $Q$ is $1.48\times10^{11} \volts$.
+            What is the charge $Q$?
+        \end{problem}
+
+        \begin{problem}[Challenge]
+            An unknown charge is some unknown distance away from Point $P$.
+            The electric potential at Point $P$ is $5 \volts\meter$ (Volt-meters) divided by the distance to the charge.
+            What is the value of the charge? \hint{\ref{hint:voltage_challenge_1}}
+        \end{problem}
+
+    \end{mdframed}
+
+    \subsubsection{Superposition}
+
+    So far, we have looked at electric potential caused by one charged object.
+    What happens when you add more?
+
+    \pnp
+
+    Electric potential obeys the \emph{Principle of Superposition},
+    which means that you can add them together.
+    An example will make this more clear.
+
+    \input{Figures/superposition}
+
+    \pnp
+
+    In Figure~\ref{fig:superposition},
+    we have three charges instead of one, and we want to calculate the potential at Point $P$.
+    Now if we only had one charge, this would be easy;
+    we could just use Equation~\ref{eq:potential} like we did in Example~\ref{ex:potential_1}.
+
+    \begin{thmboxed}[Superposition]
+        The electric potential caused by multiple charges is the sum of the electric fields caused by each charge.
+        For example, with 3 charges as in Figure~\ref{fig:superposition},
+        \begin{equation}
+            V=V_1+V_2+V_3=\frac{kQ_1}{r_1}+\frac{kQ_2}{r_2}+\frac{kQ_3}{r_3}.
+            \label{eq:superposition}
+        \end{equation}
+        More generally,
+        \begin{equation}
+            V = \sum_i V_i = \sum_i \frac{kQ_i}{r_i},
+            \label{eq:advanced_superposition}
+        \end{equation}
+        but you won't need to know this for the assessment.
+    \end{thmboxed}
+    \begin{exrboxed}
+        \label{exr:superposition}
+        What is the potential at a point which is $1.3\centimeters$ from a $1\nanocoulombs$ charge, $2\centimeters$ from a $2.1 \nanocoulombs$ charge, and $9.1\millimeters$ from a $-10\nanocoulombs$ charge?
+        \hint{\ref{hint:table_of_conversions}}
+    \end{exrboxed}
+
+
+    \section{Voltage and potential difference} \label{sec:voltage-and-potential-difference}
+    Voltage is simply the difference, or change, of electric potential between two points in space.
+    You might have heard voltage related to a battery;
+    it is the difference in electric potential between the two ends of the battery.
+    \pnp
+    Voltage is represented as $\Delta V = V_b - V_a$ for the voltage between two points $a$ and $b$.
+    You might also see this as $\Delta V_{ab}$ to make the direction of
+    voltage more clear. \bluebf{Order matters.}
+
+    \subsubsection{Particles moving in a potential difference}\label{subsec:potential-difference}
+    \input{Figures/potential_gradient}
+    The potential can be different at different points.
+    If there is a difference in potential (if there is a voltage), charged particles will move.
+
+    \pnp
+
+    As you can see in Figure~\ref{fig:potential_gradient},
+    a positive charge will want to move towards a region of lower potential,
+    and a negative charge will want to move towards a region of higher potential.
+
+    \begin{exrboxed}
+        A positive charge and a negative charge are on a number line as shown.
+        Then, you add a positive charge at Point $P$.
+        Will the new positive charge move, and if so,
+        in which direction?
+
+        \medskip
+
+        \input{Figures/number_line1.tex}
+        \label{exr:number_line_1}
+    \end{exrboxed}
+    \begin{exrboxed}[Challenge]
+        Two positive charges of equal magnitude (value) are on a number line as shown.
+        Then, you add a negative charge at Point $P$.
+        Will the new negative charge move, and if so,
+        in which direction?
+
+        \medskip
+
+        \input{Figures/number_line2.tex}
+        \label{exr:number_line_2}
+    \end{exrboxed}
+
+
+    \section{Electric Fields}\label{sec:electric-fields}
+    In Subsection~\ref{subsec:potential-difference},
+    we learned that positively charged particles move towards a lower electric potential.
+    Electric fields and electric field lines show us in which direction the lowest electric potential actually is.
+
+    \pnp
+
+    Just as all charged particles cause an electric potential,
+    all electrically charged particles induce (cause) an electric field.
+    The electric field represents the direction a positively charged particle will move when released,
+    and also how strong the difference in potential is.
+
+    \pnp
+    For the more mathematically inclined, the electric field $\vec{E}$ is defined by
+    \[
+        \vec{E}=-\vec{\nabla}V,
+    \]
+    where $\vec{\nabla}$ (the \emph{gradient vector}) means the direction with the most increase.
+    The minus sign is there because positively charged particles move in the direction with the most decrease.
+    If you'd like, you can visualize this in the \href{https://www.geogebra.org/3d/mtunejmv}{live demo}.
+
+    \pnp
+
+    We saw that voltage is a measure of the change in potential between two points.
+    The electric field is a sort of measure of the change in potential between every point.
+    You can think of electric field as voltage per unit distance,
+    and the units for electric field strength are $\voltpermeter$.
+
+    \begin{thmboxed}
+        \label{thm:electric-field}
+        The strength $E$ of the electric field $\vec{E}$ caused by a particle with charge $Q$ at a distance of $r$ is given by
+        \begin{equation}
+            \label{eq:electric-field}
+            E=\frac{kQ}{r^2}.
+        \end{equation}
+    \end{thmboxed}
+    \begin{exboxed}
+        \label{ex:electric_field1}
+        What is the electric field strength $10 \meters$ from a charge of $+20\coulombs$?
+    \end{exboxed}
+
+    To solve this problem we can just use the formula from Theorem~\ref{thm:electric-field}:
+    \begin{align*}
+        E&=\frac{kQ}{r^2}\\
+        &=\frac{\del{\kconst}\del{20 \coulombs}}{\del{10 \meters}^2}\\
+        &=\boxed{1.8\times 10^{9}\voltspermeter}.
+    \end{align*}
+
+    \begin{exboxed}
+        The electric field strength at a point three meters ($3\meters$) from a charge is -1 Volts per meter ($-1\voltspermeter$).
+        What is the value of the charge?
+    \end{exboxed}
+
+    We begin as before, first plugging in the values that we know into Equation~\ref{eq:electric-field}:
+    \begin{align*}
+        V&=\frac{kQ}{r}\\
+        -1\voltspermeter&=\frac{\del{\kconst}\del{Q}}{\del{3 \meters}^2},
+    \end{align*}
+    but now we have to make some manipulations.
+    First, we multiply both sides of the equation by $\del{3\meters}^2$ to remove it from the denominator (the bottom):
+    \begin{align*}
+        -1\voltspermeter\cdot \del{3\meters}^2&=\frac{\del{\kconst}\del{Q}}{\del{3\meters}^2}\cdot \del{3\meters}^2\\
+        -9 \volts\cdot\meter&=\del{\kconst}\del{Q}.
+    \end{align*}
+    We now divide by $k=\kconst$ so that we are left with $Q$,
+    the charge that we want to find.
+    \begin{align*}
+        \frac{-9 \volts\cdot\meter}{\del{\kconst}}&=\frac{\del{\kconst}\del{Q}}{\del{\kconst}}\\
+        -1\times 10^{-9} \coulombs &= Q\\
+        Q &= \boxed{-1\times 10^{-9} \coulombs}.
+    \end{align*}
+
+    \begin{exrboxed}
+        I draw a circle around a charge.
+        Is the electric potential the same at every point on the circle?
+        Is the electric field strength the same at every point on the circle?
+        Assume there is no other charge in the system.
+        \hints{\ref{hint:circle1}, \ref{hint:circle2}}
+    \end{exrboxed}
+
+    \subsubsection{Combining Electric Fields}
+    To find the electric field caused by multiple charges particles,
+    we can take the electric fields caused by each charge and join them together using what is called a \emph{vector sum}.
+    You will not need to know how this works, but you can think of it as putting all the arrows representing the diretions end-to-end.
+
+    \input{Figures/electric_field_superposition.tex}
+    \pnp
+    More importantly, we should know that when electric fields point in the same direction, they build each other up,
+    while when they point in opposite directions, they work against each other.
+
+    \pnp
+
+    Electric fields give us an easy way to solve the challenge problems from the electric potential section.
+
+    \begin{exboxed}[Exercise~\ref{exr:number_line_1}]
+        A positive charge and a negative charge are on a number line as shown.
+        Then, you add a positive charge at Point $P$.
+        Will the new positive charge move, and if so,
+        in which direction?
+
+        \medskip
+
+        \input{Figures/number_line1.tex}
+    \end{exboxed}
+
+    The electric field caused by the red positive charge and the electric field caused by the blue negative charge both point right
+    (which is towards the blue negative charge and away from the red positive charge).
+    Since the charge we add to Point $P$ is positive, it travels along the electric field lines and moves right.
+
+    \begin{exrboxed}[Exercise~\ref{exr:number_line_2}]
+        Two positive charges of equal magnitude (value) are on a number line as shown.
+        Then, you add a negative charge at Point $P$.
+        Will the new negative charge move, and if so,
+        in which direction? \hint{\ref{hint:number_line}}
+
+        \medskip
+
+        \input{Figures/number_line2.tex}
+    \end{exrboxed}
+
+    \subsubsection{Electric Field Lines}\label{subsec:electric-field-lines}
+
+    Electric field lines are just a way to draw the electric field.
+    The direction of the lines is the direction of the electric field,
+    and the more lines in a given region, the stronger the field.
+    A positive charge travels along the electric field lines,
+    while a negative charge travels against them.
+    Electric field lines point in the direction of decreasing potential.
+    \input{Figures/electric_field_point_charge}
+
+    \begin{exrboxed}
+        A negatively charged object is placed in an electric field pointing left.
+        In which direction does the object move?
+    \end{exrboxed}
+
+    Since a negative charge moves against the electric field lines,
+    the object will move right.
+
+
+    \input{Figures/field_lines}
+
+
+
+    \begin{mdframed}[style=exmdbox]
+        \begin{problem}
+            What is the electric field strength at a point $7\meters$ from a $-2.2\coulombs$ charge?
+            What direction is the electric field (away from the charge, towards the charge, or something else)?
+        \end{problem}
+        \begin{problem}
+            What is the electric field strength $2\millimeters$ from a charge of $6.4\nanocoulombs$? \hint{\ref{hint:table_of_conversions}}
+        \end{problem}
+
+        \begin{problem}
+            What happens to electric field strength as the distance to the charge decreases? \hint{\ref{hint:approximate_limit_electric_field}}
+        \end{problem}
+
+        \begin{problem}[Challenge]
+            Point $P$ is 10 meters to the right of an unknown charge.
+            The electric potential at Point $P$ is $3\volts$.
+            What is the electric field (strength and direction) at Point $P$? \hint{\ref{hint:field_challenge_1}}
+        \end{problem}
+
+    \end{mdframed}
+
+
+    \section{Electric Force (Coulomb's Law)}
+    We said that the electric field is the direction a positively charged particle will move when released
+    and how strong the difference in potential is.
+    However, how much a particle is affected by the field depends on the charge of that particle.
+
+    \pnp
+
+    An electric field induces more force on a particle with a large charge than one with a small charge.
+    In fact, you can think of electric field as force per unit charge.
+
+    \begin{thmboxed}
+        The electric field is equal to force per unit charge,
+        so
+        \begin{equation}
+            E=\frac{F}{q}.
+            \label{eq:force_per_unit_charge}
+        \end{equation}
+    \end{thmboxed}
+
+    \begin{exboxed}
+        If the electric field strength $E$ at a point is $10 \newtonsspercoulomb$,
+        what force would a $1 \coulombs$ charge experience if placed at that point?
+    \end{exboxed}
+
+    We use Equation~\ref{eq:force_per_unit_charge} to find that
+    \begin{align*}
+        F &= E\cdot q\\
+        &= 10 \newtonspercoulomb \cdot 1 \coulombs\\
+        &= \boxed{10 \newtons}.
+    \end{align*}
+
+    \pagebreak[2]
+    \begin{thmboxed}[Coulomb's Law]
+        The electric field is equal to force per unit charge,
+        so
+        \begin{align*}
+            F &= E\cdot q\\
+            F &= \del{\frac{kQ}{r^2}}\cdot q\\
+            F &= k\frac{qQ}{r^2}.
+        \end{align*}
+    \end{thmboxed}
+
+    \begin{mdframed}[style=exmdbox]
+        \begin{problem}
+            If a $-10 \coulombs$ charge at Point $P$ experiences an electric force of magnitude $530\newtons$,
+            what is the electric field strength at Point $P$?
+        \end{problem}
+
+        \begin{problem}
+            How far must a $2\nanocoulombs$ charge be from a $1\microcoulombs$ charge such that the force between them\footnotemark{} is $3.4\newtons$?
+            \hint{\ref{hint:table_of_conversions}}
+        \end{problem}
+
+        \begin{problem}[Shieh]
+            Two charges are placed next to each other.
+            Both charges have a charge of $8.3\times10^{-11}\coulombs$ and the distance between them is $5.7\times10^{-5}\meters$.
+            What is the electrical force?
+        \end{problem}
+
+        \begin{problem}[Shieh]
+            Two charges are separated by $3.5\times10^{-5}\meters$.
+            The first charge has a charge of $7.2\times10^{-10}\coulombs$,
+            and the second has a charge of $-1.6\times10^{-10}\coulombs$.
+            What is the electrical force between them?
+        \end{problem}
+    \end{mdframed}
+    \footnotetext{The force between any two charges is equal to the force either one of them imposes on the other.
+    By Newton's Third Law of Motion, the force will be the same no matter which particle you choose.}
+
+
+    \section{Potential Energy}\label{sec:potential-energy}
+
+    Like the electric force is charge times electric field (Equation~\ref{eq:force_per_unit_charge}: $F=q\cdot E$),
+    electric potential energy ($U$) is charge times electric potential.
+    % remove next sentence?
+    In that sense, electric potential is a form of potential energy per unit charge.
+
+    \begin{thmboxed}
+        Electric potential is equal to electric potential energy per unit charge,
+        so
+        \begin{equation}
+            V=\frac{U}{q}.
+            \label{eq:potential_per_unit_charge}
+        \end{equation}
+    \end{thmboxed}
+
+    \begin{exboxed}
+        If the electric potential $V$ at a point is $7 \volts$,
+        how much potential energy would a $0.4 \coulombs$ charge have at that point?
+    \end{exboxed}
+
+    We use Equation~\ref{eq:potential_per_unit_charge} to find that
+    \begin{align*}
+        U &= V\cdot q\\
+        &= 7 \volts \cdot 0.4 \coulombs\\
+        &= \boxed{2.8 \joules}.
+    \end{align*}
+
+    \pagebreak[2]
+    \begin{thmboxed}
+        Electric potential is equal to electric potential energy per unit charge,
+        so
+        \begin{align*}
+            U &= V\cdot q\\
+            U &= \del{\frac{kQ}{r}}\cdot q\\
+            U &= k\frac{qQ}{r}.
+        \end{align*}
+    \end{thmboxed}
+
+    \begin{exercises}
+        \begin{problem}
+            A system of two point charges has $U=-1.41\times 10^{-6} \joules$.
+            If the first charge is $-25\coulombs$ and the second is $27 \coulombs$,
+            what is the distance between the charges?
+        \end{problem}
+        \begin{problem}[Challenge]
+            Assume a charge $+Q$ is fixed in place.
+            A charge $+q$ is released from rest from a distance of $10\nanometers$ away from $Q$.
+            Because both charges are positive, they repel each other and the $+q$ charge starts to move further away from the fixed $+Q$ charge.
+            What is the total energy of the $+q$ charge once it is $30\centimeters$ away from the $+Q$ charge?
+            \hints{\ref{hint:table_of_conversions}, \ref{hint:conservation_of_energy}, \ref{hint:zero_kinetic_energy}}
+        \end{problem}
+    \end{exercises}
+
+    \subsubsection{Work}
+    Just as voltage is the difference in potential between two points ($\Delta V$),
+    work is the difference in potential energy of a particle between two points ($W=\Delta U$).
+
+    \pnp
+
+    Since $U=V\cdot q$,
+    \begin{align*}
+        \Delta U&=\Delta \del{V\cdot q}\\
+        &= \del{\Delta V}\cdot q.\: \footnotemark
+    \end{align*}
+    \footnotetext{Technically, $\Delta \del{V\cdot q}$ equals $\del{\Delta V}\cdot q+\del{\Delta q}\cdot V+\del{\Delta V}\del{\Delta q}$,
+    but we make the assumption that charge doesn't change ($\Delta q=0$) to simplify to $\del{\Delta V}\cdot q$.}
+
+
+    \section{Ratio Trick}\label{sec:ratio-trick}
+    When we're asked what would happen if we scaled some variables by a constant,
+    the answer would be the same no matter what the original values of the variables are\footnote{This is only true if the only operations are addition and multiplication.}.
+
+    \pnp
+
+    So, we can set the original values of the variables to whatever number we choose.
+    Since both multiplication and division by 1 don't change the number,
+    it will make our lives easier if we choose all of them to be 1.
+
+    \pnp
+
+    Then, the original number is 1 while the final number is just the ratio of scaling factors.
+    Let's look at an example to make this more clear.
+
+    \begin{exboxed}
+        What happens to the electric field as $Q$ doubles and $r$ triples?
+        \label{ex:ratio-trick}
+    \end{exboxed}
+
+    Remember that by Equation~\ref{eq:electric-field},
+    $E=\frac{kQ}{r^2}$.
+    First we check to make sure that our equation involves only multiplication and division.
+    Since this equation only involves mutiplication and division,
+    we can use the ratio trick.
+
+    \pnp
+
+    Plugging in 1 for all the initial variables,
+    we get
+    \[E_{\text{initial}}=\frac{1\cdot1}{1^2}=1.\]
+    In fact, the initial value will \emph{always} equal 1 with this trick.
+    Then, we plug in the scaled versions of the variables:
+    \[E_{\text{scaled}}=\frac{1\cdot2}{3^2}=\frac{2}{9}.\]
+    We find that what happens to $E$ as $Q\mapsto2Q$ and $r\mapsto3r$ is that $E$ gets multiplied by $\frac{\frac{2}{9}}{1}=\frac{2}{9}$,
+    or $\boxed{E\mapsto\frac{2}{9}E}$.
+
+    \subsubsection{Shortcut}
+
+    There is an even shorter and simpler version of the ratio trick.
+    We only need to calculate the scaled variable as in $E_\text{scaled}$ from Section~\ref{sec:ratio-trick}.
+    This is easy, we just
+    \bluebf{plug in the scaling factor for every variable that changes and 1 for everything that doesn't.}
+
+    \pnp
+
+    Using Example~\ref{ex:ratio-trick},
+    we again get \[E_{\text{scaled}}=\frac{1\cdot2}{3^2}=\frac{2}{9}.\]
+    This immediately tells us that $\boxed{E\mapsto\frac{2}{9}E}$.
+
+    \begin{mdframed}[style=exmdbox, frametitle={Exercises from Mr. Shieh}]
+        \begin{problem}[Shieh]
+            When $q$ increases by a factor of 5, how does $F$ change?
+        \end{problem}
+        \begin{problem}[Shieh]
+            When $k$ decreases by a factor of 2, how does $F$ change?
+            \hints{\ref{hint:k_changes}, \ref{hint:decrease_by_a_factor}}
+        \end{problem}
+        \begin{problem}[Shieh]
+            When $r$ increases by a factor of 3, how does $F$ change?
+        \end{problem}
+    \end{mdframed}
+
+    \pagebreak[3]
+
+
+    \section{Equations to Remember}\label{sec:equations-to-remember}
+
+    Everything that we have learned can be derived from the following equations.
+
+    \par
+
+    {\Large
+        \begin{align*}
+            \setlength{\abovedisplayskip}{3em}
+            \setlength{\belowdisplayskip}{\abovedisplayskip}
+            V&=\frac{kQ}{r} & U=q\cdot V\\
+            E&=\frac{kQ}{r^2} & F=q\cdot E
+        \end{align*}}%
+
+
+
+
+    \pagebreak[4]
+
+
+    \section{Hints} \label{sec:hints}
+
+    \begin{enumerate}[leftmargin=0pt, itemsep=1.4em]
+
+        \item \label{hint:voltage_challenge_1} It is, in fact, impossible to find out what $V$ and $r$ are.
+        However, we can find out the value they have when multiplied together, $V\cdot r$.
+        This will allow you to find $Q$, the desired value of the charge.
+        \item \label{hint:circle1} A circle has a constant radius.
+        That is, the distance $r$ to the circle's center is the same from every point on the circle.
+        \item \label{hint:k_changes} This can never actually happen in real life because $k$ is a constant.
+        Still, you can answer the question using the trick from Section~\ref{sec:ratio-trick}.
+        \item \label{hint:circle2} The charge $Q$ in the center of the circle and the constant $k$ don't change.
+        What does that mean in your formulae?
+        \item \label{hint:ex} This is an example of a hint.
+        \item \label{hint:number_line} The electric field caused by the charge on the left points right, while the electric field caused by the charge on the right points left.
+        This means that they will work against each other.
+        Which of the electric fields is stronger?
+        \item \label{hint:table_of_conversions} Use your table of conversions provided by Mr. Shieh or \href{https://physics.nist.gov/cuu/Units/prefixes.html}{this one} to convert to SI base units.
+        Then solve as normal.
+        \item \label{hint:decrease_by_a_factor} To decrease by a factor of $s$ means to multiply by $1/s$.
+        For example, decreasing by a factor of 10 is the same as being multiplied by $1/10=0.1$.
+        \item \label{hint:field_challenge_1} What is the equation for potential?
+        What is the equation for electric field strength?
+        How are they related?
+        \item \label{hint:conservation_of_energy} We can use the Law of Conservation of Energy,
+        which says that the total energy of any closed system remains the same over time.
+        Because of that, you just need to calculate total energy for whichever point in time is most convenient.
+        \item \label{hint:approximate_limit} Try plugging in larger and larger values of $r$ and see what happens to $V$.
+        \item \label{hint:zero_kinetic_energy} The only energies that we need to consider are kinetic energy (energy from motion) and electric potential energy.
+        When the charge $+q$ is at rest (before it is released and starts to shoot away from the $+Q$ charge),
+        it is not moving (this is the definition of rest), so it has no kinetic energy.
+        This means that the total energy is just the electric potential energy at this time.
+        \item \label{hint:approximate_limit_electric_field} Try plugging in smaller and smaller values of $r$ and see what happens to $E$.
+    \end{enumerate}
+    \bibliographystyle{plain}
+    \bibliography{ref}
+    \subsubsection*{Acknowledgements}
+    The styles for this worksheet are based on styles created by CJ Quines.
+\end{document}
