@@ -15,5 +15,9 @@ Recall that a sphere is uniquely defined by the length of its radius, the line s
 ![Two radii of a sphere are shown.
 Note that they have the same length.\ \cite{Sphere_and_Ball}](images/Sphere_and_Ball.png){#fig:radius}
 
+::: defboxed
+When we treat an atom as a sphere, its _atomic radius_ is the radius of that sphere.
+:::
+
 \bibliographystyle{alpha}
 \bibliography{ref}
