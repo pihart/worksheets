@@ -74,7 +74,7 @@ Conversely, if you separate the atoms, you decrease repulsion far more than you 
 ![Protons repulse other protons, electrons repulse other electrons, protons attract electrons, and electrons attract protons.](images/attraction-repulsion.jpg){#fig:attraction-repulsion}
 
 This explains why the equilibrium was _stable_;
-no matter how you affected the distance, it would try to self-correct.
+no matter how you affected the distance, the atoms would try to self-correct.
 
 \bibliographystyle{alpha}
 \bibliography{ref}
