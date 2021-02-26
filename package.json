@@ -4,7 +4,7 @@
   "description": "Instructional worksheets for various introductory topics",
   "main": "index.js",
   "devDependencies": {
-    "tex": "github:pihart/tex#v4.0.0"
+    "tex": "github:pihart/tex#v5.2.0"
   },
   "scripts": {},
   "repository": {
